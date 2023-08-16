@@ -81,7 +81,7 @@ li.card-text > span {
 
 .message > .homeBtn {
     /* animation: slide-btn 2s ease; */
-    border: 2px solid black;
+    /* border: 2px solid black; */
     border-radius: 4rem;
     width: 11rem;
     height: 3rem;
@@ -90,7 +90,8 @@ li.card-text > span {
     align-items: center;
 }
 .message > .homeBtn:hover {
-    border: 2px solid black;
+    /* border: 2px solid #1c76fd; */
+    color: #1c76fd;
 }
 
 .img-circle {
@@ -457,7 +458,7 @@ nav > .tabsNav > .btnNav.active {
     margin-right: 0.25rem;
 }
 
-.nav-item:hover {
+.nvg-item:hover {
     background-color: #bfdb38;
     color: white;
     font-weight: bold;
@@ -721,6 +722,9 @@ div > .jump-kegiatan:hover {
 .btn-olah {
     color: white !important;
 }
+.btn-olah {
+    color: white !important;
+}
 
 /* .container-box {
     width: 70px;
@@ -837,53 +841,118 @@ li button i{
     letter-spacing: 2px;
 } */
 
-table > thead > tr > th, tbody > tr > td{
+table > thead > tr > th,
+tbody > tr > td {
     font-size: 12px;
 }
-.table-strategi{
+.table-strategi {
     width: 100%;
 }
 
-.table-strategi > thead > tr > th{
+.table-strategi > thead > tr > th {
     text-align: center;
 }
 .table-strategi > thead > tr > th:nth-child(4) {
     width: 70%;
 }
 
-.accordion-body > p{
+.accordion-body > p {
     font-size: 11px;
 }
 
-.dropdown > .filter-action{
+.dropdown > .filter-action {
     background-color: transparent;
-    border:none;
+    border: none;
     color: black;
 }
 .dropdown > .filter-action:hover {
     background-color: transparent;
-    border:none;
+    border: none;
 }
 
-.btn-capaian{
+.btn-capaian {
     width: 15px;
     height: 15px;
+    color: white !important;
 }
-.dropdown-filter > li > .dropdown-item{
+.dropdown-filter > li > .dropdown-item {
     background-color: transparent;
     color: black;
     font-weight: normal;
     text-align: left;
 }
-.dropdown-filter > li > .dropdown-item:hover{
+.dropdown-filter > li > .dropdown-item:hover {
     background: transparent;
     color: black;
     font-weight: normal;
 }
 
-.dropdown-filter > li:hover{
+.dropdown-filter > li:hover {
     background: #d2d2d2;
 }
-.dropdown-filter > li{
-    border-radius:0;
+.dropdown-filter > li {
+    border-radius: 0;
 }
+
+.form-signin {
+    background-color:white;
+}
+.form-signin input {
+    max-width: 350px;
+}
+
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: 3px;
+    border-bottom-right-radius: 0;
+    border-radius: 0;
+}
+.form-signin input[type="text"] {
+    width:20em;
+    margin-bottom: 3px;
+    border-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    width:20em;
+    margin-bottom: 10px;
+    border-radius: 0;
+}
+.form-signin button{
+    width:20em;
+}
+
+.login-notif p{
+    text-align: center;
+}
+
+.login-notif i{
+    font-size:10rem;
+    color: #bfdb38;
+}
+
+.form-register {
+    background-color:white;
+}
+
+.form-register .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-register input[type="email"] {
+    margin-bottom: 5px;
+    border-radius: 0;
+}
+.form-register input[type="text"] {
+    margin-bottom: 5px;
+    border-radius: 0;
+}
+
+.form-register input[type="password"] {
+    margin-bottom: 10px;
+    border-radius: 0;
+}
+

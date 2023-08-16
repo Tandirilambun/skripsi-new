@@ -14,7 +14,9 @@ use App\Models\IndikatorGeneral;
 use App\Models\IndikatorOutcome;
 use App\Models\IndikatorUltimate;
 use App\Models\UltimateObjective;
+use Illuminate\Support\Facades\DB;
 use App\Models\IndikatorUseOfOutput;
+use Illuminate\Support\Facades\Auth;
 use App\Models\IndikatorIntermediate;
 use App\Models\IntermediateObjective;
 use App\Http\Requests\StoreOutputRequest;
@@ -117,7 +119,8 @@ class HomeController extends Controller
         ActivityLog::create([
             'tipe_log' => 'insert',
             'details_log' => $request-> inputRoadmap,
-            'locations_log' => 'Periode Renstra'
+            'locations_log' => 'Periode Renstra',
+            'id_user' => Auth::user() -> id_user,
         ]) -> save();
         return redirect('/home') -> with('success', 'Periode has been stored successfully');
     }
@@ -130,7 +133,8 @@ class HomeController extends Controller
         ActivityLog::create([
             'tipe_log' => 'insert',
             'details_log' => $request-> input_general,
-            'locations_log' => 'General Objective'
+            'locations_log' => 'General Objective',
+            'id_user' => Auth::user() -> id_user,
         ]) -> save();
         return redirect('/home') -> with('success', 'General Objective has been stored successfully');
     }
@@ -144,7 +148,8 @@ class HomeController extends Controller
         ActivityLog::create([
             'tipe_log' => 'insert',
             'details_log' => $request-> input_ultimate,
-            'locations_log' => 'Ultimate Objective'
+            'locations_log' => 'Ultimate Objective',
+            'id_user' => Auth::user() -> id_user,
         ]) -> save();
         return redirect('/home') -> with('success', 'Ultimate Objective has been stored successfully');
     }
@@ -158,7 +163,8 @@ class HomeController extends Controller
         ActivityLog::create([
             'tipe_log' => 'insert',
             'details_log' => $request-> input_intermediate,
-            'locations_log' => 'Intermediate Objective'
+            'locations_log' => 'Intermediate Objective',
+            'id_user' => Auth::user() -> id_user,
         ]) -> save();
         return redirect('/home') -> with('success', 'Intermediate Objective has been stored successfully');
     }
@@ -172,7 +178,8 @@ class HomeController extends Controller
         ActivityLog::create([
             'tipe_log' => 'insert',
             'details_log' => $request-> input_outcome,
-            'locations_log' => 'Outcome'
+            'locations_log' => 'Outcome',
+            'id_user' => Auth::user() -> id_user,
         ]) -> save();
         return redirect('/home') -> with('success', 'Outcome has been stored successfully');
     }
@@ -186,7 +193,8 @@ class HomeController extends Controller
         ActivityLog::create([
             'tipe_log' => 'insert',
             'details_log' => $request-> input_useOfoutput,
-            'locations_log' => 'Use of Output'
+            'locations_log' => 'Use of Output',
+            'id_user' => Auth::user() -> id_user,
         ]) -> save();
         return redirect('/home') -> with('success', 'Use of Output has been stored successfully');
     }
@@ -201,13 +209,14 @@ class HomeController extends Controller
         ActivityLog::create([
             'tipe_log' => 'insert',
             'details_log' => $request-> input_output,
-            'locations_log' => 'Output'
+            'locations_log' => 'Output',
+            'id_user' => Auth::user() -> id_user,
         ]) -> save();
         return redirect('/home') -> with('success', 'Output has been stored successfully');
     }
 
     public function addIndGeneral(StoreIndikatorGeneralRequest $request){
-        return $request;
+        // return $request;
         IndikatorGeneral::create([
             'id_general' => $request -> selectGeneral,
             'deskripsi_indikator_general' => $request -> input_indikator_general
@@ -215,7 +224,8 @@ class HomeController extends Controller
         ActivityLog::create([
             'tipe_log' => 'insert',
             'details_log' => $request-> input_indikator_general,
-            'locations_log' => 'Indikator General Objective'
+            'locations_log' => 'Indikator General Objective',
+            'id_user' => Auth::user() -> id_user
         ]) -> save();
         return redirect('/home') -> with('success', 'Indikator for General Objective has been stored successfully');
     }
@@ -229,7 +239,8 @@ class HomeController extends Controller
         ActivityLog::create([
             'tipe_log' => 'insert',
             'details_log' => $request-> input_indikator_ultimate,
-            'locations_log' => 'Indikator Ultimate Objective'
+            'locations_log' => 'Indikator Ultimate Objective',
+            'id_user' => Auth::user() -> id_user,
         ]) -> save();
         return redirect('/home') -> with('success', 'Indikator for Ultimate Objective been stored successfully');
     }
@@ -243,7 +254,8 @@ class HomeController extends Controller
         ActivityLog::create([
             'tipe_log' => 'insert',
             'details_log' => $request-> input_indikator_intermediate,
-            'locations_log' => 'Indikator Intermediate Objective'
+            'locations_log' => 'Indikator Intermediate Objective',
+            'id_user' => Auth::user() -> id_user,
         ]) -> save();
         return redirect('/home') -> with('success', 'Indikator for Intermediate Objective has been stored successfully');
     }
@@ -257,7 +269,8 @@ class HomeController extends Controller
         ActivityLog::create([
             'tipe_log' => 'insert',
             'details_log' => $request-> input_indikator_outcome,
-            'locations_log' => 'Indikator Outcome'
+            'locations_log' => 'Indikator Outcome',
+            'id_user' => Auth::user() -> id_user,
         ]) -> save();
         return redirect('/home') -> with('success', 'Indikator for Output has been stored successfully');
     }
@@ -271,7 +284,8 @@ class HomeController extends Controller
         ActivityLog::create([
             'tipe_log' => 'insert',
             'details_log' => $request-> input_indikator_useofoutput,
-            'locations_log' => 'Indikator Use of Output'
+            'locations_log' => 'Indikator Use of Output',
+            'id_user' => Auth::user() -> id_user,
         ]) -> save();
         return redirect('/home') -> with('success', 'Indikator for Use Of Output has been stored successfully');
     }
@@ -285,7 +299,8 @@ class HomeController extends Controller
         ActivityLog::create([
             'tipe_log' => 'insert',
             'details_log' => $request-> input_indikator_output,
-            'locations_log' => 'Indikator Output'
+            'locations_log' => 'Indikator Output',
+            'id_user' => Auth::user() -> id_user,
         ]) -> save();
         return redirect('/home') -> with('success', 'Indikator for Output has been stored successfully');
     }

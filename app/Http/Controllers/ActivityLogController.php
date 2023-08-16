@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Users;
 use App\Models\ActivityLog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -17,7 +18,11 @@ class ActivityLogController extends Controller
     public function index()
     {
         $activity_log = DB::table('activity_log')
-            ->select('*')
+            ->select(
+                'activity_log.*',
+                'users.name'
+            )
+            ->leftJoin('users', 'users.id_user', '=', 'activity_log.id_user')
             ->orderBy('created_at', 'desc')
             ->get();
         $x = 'All';
@@ -25,7 +30,7 @@ class ActivityLogController extends Controller
         return view('Renstra.audit-log', [
             'x' => $x,
             'activity_log' => $activity_log,
-            'jenis_activity' => $jenis_activity
+            'jenis_activity' => $jenis_activity,
         ]);
     }
 
@@ -81,34 +86,46 @@ class ActivityLogController extends Controller
     {
         if ($request->btn_value == 'insert') {
             $activity_log = DB::table('activity_log')
-                ->select('*')
+                ->select(
+                    'activity_log.*',
+                    'users.name'
+                )
+                ->leftJoin('users', 'users.id_user', '=', 'activity_log.id_user')
                 ->where('tipe_log', '=', 'insert')
                 ->orderBy('created_at', 'desc')
                 ->get();
             $x = 'Insert';
         } elseif ($request->btn_value == 'update') {
             $activity_log = DB::table('activity_log')
-                ->select('*')
+                ->select(
+                    'activity_log.*',
+                    'users.name'
+                )
+                ->leftJoin('users', 'users.id_user', '=', 'activity_log.id_user')
                 ->where('tipe_log', '=', 'update')
                 ->orderBy('created_at', 'desc')
                 ->get();
             $x = 'Update';
         } elseif ($request->btn_value == 'delete') {
             $activity_log = DB::table('activity_log')
-                ->select('*')
+                ->select(
+                    'activity_log.*',
+                    'users.name'
+                )
+                ->leftJoin('users', 'users.id_user', '=', 'activity_log.id_user')
                 ->where('tipe_log', '=', 'delete')
                 ->orderBy('created_at', 'desc')
                 ->get();
             $x = 'Delete';
-        }elseif ($request->btn_value == 'all'){
+        } elseif ($request->btn_value == 'all') {
             $x = 'All';
             return redirect('/activity-log');
         }
         $jenis_activity = collect(['all', 'insert', 'update', 'delete']);
-        return view("Renstra.audit-log",[
+        return view("Renstra.audit-log", [
             'x' => $x,
             'activity_log' => $activity_log,
-            'jenis_activity' => $jenis_activity
+            'jenis_activity' => $jenis_activity,
         ]);
     }
 }
