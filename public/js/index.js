@@ -19,7 +19,29 @@ try {
         myModal.show();
     });
 } catch (error) {
-    //pass
+    // pass
+}
+
+try {
+    var modalElement = document.getElementById("notifModal");
+    var myModal = new bootstrap.Modal(modalElement);
+
+    window.addEventListener("DOMContentLoaded", () => {
+        myModal.show();
+    });
+} catch (error) {
+    // pass
+}
+
+try {
+    var modalElement = document.getElementById("zeroModal");
+    var myModal = new bootstrap.Modal(modalElement);
+
+    window.addEventListener("DOMContentLoaded", () => {
+        myModal.show();
+    });
+} catch (error) {
+    // pass
 }
 
 //popover
