@@ -1,31 +1,18 @@
 @extends('main.index')
-
 @section('index')
     <div class="container py-5">
-        @if (session('indikator general'))
-            {{ session()->flush() }}
+        @if ($indikator_page === 'indikator_general')
             @include('Renstra.general-objective.indikator-general')
-
-        @elseif (session('indikator ultimate'))
-            {{ session()->flush() }}
+        @elseif ($indikator_page === 'indikator_ultimate')
             @include('Renstra.ultimate-objective.indikator-ultimate')
-
-        @elseif (session('indikator intermediate'))
-            {{ session()->flush() }}
+        @elseif ($indikator_page === 'indikator_intermediate')
             @include('Renstra.intermediate-objective.indikator-intermediate')
-
-        @elseif (session('indikator outcome'))
-            {{ session()->flush() }}
+        @elseif ($indikator_page === 'indikator_outcome')
             @include('Renstra.outcome.indikator-outcome')
-
-        @elseif(session('indikator use of output'))
-            {{ session()->flush() }}
+        @elseif($indikator_page === 'indikator_useofoutput')
             @include('Renstra.use-of-output.indikator-useofoutput')
-
-        @elseif(session('indikator output'))
-            {{ session()->flush() }}
+        @elseif($indikator_page === 'indikator_output')
             @include('Renstra.output.indikator-output')
-            
         @endif
     </div>
 @endsection
