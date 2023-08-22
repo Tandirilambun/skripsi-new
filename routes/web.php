@@ -3,12 +3,14 @@
 use App\Models\IndikatorOutcome;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DataPageController;
 use App\Http\Controllers\StrategiController;
 use App\Http\Controllers\IndikatorController;
 use App\Http\Controllers\ActivityLogController;
 use App\Http\Controllers\RenstraPageController;
 use App\Http\Controllers\IndikatorOutcomeController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +24,17 @@ use App\Http\Controllers\IndikatorOutcomeController;
 */
 
 //Main Routes
-Route::resource('home',HomeController::class);
+//Route for login & registration
+Route::get('/login',[LoginController::class, 'showLogin']) -> name('login') -> middleware('guest');
+Route::post('/login',[LoginController::class, 'authenticate']);
+Route::post('/logout',[LoginController::class, 'logoutUser']);
+
+Route::get('/register',[RegisterController::class, 'showRegister']);
+Route::post('/register',[RegisterController::class, 'store']);
+
+//Route for home page
+Route::get('/home',[HomeController::class, 'index']) -> name('home') -> middleware('auth');
+Route::get('/home/create',[HomeController::class, 'create']);
 // Route::get('/departemen/{departemen}',[DepartemenController::class,'show']);
 // Route::get('/unit/{unit}',[UnitController::class,'show']);
 

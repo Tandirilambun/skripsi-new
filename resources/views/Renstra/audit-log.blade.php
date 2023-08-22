@@ -13,6 +13,7 @@
                     <ul class="dropdown-menu shadow-sm">
                         @foreach ($jenis_activity as $item)
                             <form action="/activity-log/filter-{{$item}}" method="POST">
+                                @csrf
                                 <li>
                                     <button type="submit" name="btn_value" class="btn dropdown-item"
                                         value="{{ $item }}">{{ Str::ucfirst($item)}}
@@ -33,7 +34,7 @@
                                     aria-controls="flush-{{ $log->id_activity }}">
                                     <i class="fa-solid fa-file-circle-plus me-3" style="font-size: 15px; color:#22A699"></i>
                                     <div>
-                                        <p class="mb-1">User insert data into
+                                        <p class="mb-1"> {{$log -> name}} insert data into
                                             <strong>{{ $log->locations_log }}</strong>
                                         </p>
                                         <small class="me-5" style="text-align: end">
@@ -59,7 +60,7 @@
                                     aria-controls="flush-{{ $log->id_activity }}">
                                     <i class="fa-solid fa-file-pen me-3" style="font-size: 15px; color:#F29727"></i>
                                     <div>
-                                        <p class="mb-1">User made changes data for
+                                        <p class="mb-1">{{$log -> name}} made changes data for
                                             <strong>{{ $log->locations_log }}</strong>
                                         </p>
                                         <small class="me-5" style="text-align: end">
@@ -85,7 +86,7 @@
                                     aria-controls="flush-{{ $log->id_activity }}">
                                     <i class="fa-solid fa-trash-can me-3" style="font-size: 15px; color:#F24C3D"></i>
                                     <div>
-                                        <p class="mb-1">User removed Data from
+                                        <p class="mb-1">{{$log -> name}} removed Data from
                                             <strong> {{ $log->locations_log }}</strong>
                                         </p>
                                         <small class="me-5" style="text-align: end">

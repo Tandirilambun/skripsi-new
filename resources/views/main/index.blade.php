@@ -181,7 +181,7 @@
                             style="border: 2px dashed #d2d2d2; border-radius:15px; width:auto; height:auto;">
                             <a href="/data-page" class="card-body card-self py-5"
                                 style="border-radius:15px; width:auto; height:auto; text-decoration: none;">
-                                <h5 class="card-title" style="font-size: 20px; font-weight:bold; text-align:center;">Data Page Rencana Strategis
+                                <h5 class="card-title" style="font-size: 20px; font-weight:bold; text-align:center;">Arsip Data Rencana Strategis
                                 </h5>
                             </a>
                         </div>

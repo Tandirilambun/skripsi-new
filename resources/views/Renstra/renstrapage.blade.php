@@ -1,4 +1,3 @@
-{{-- @dd( $intermediate_4_query) --}}
 @extends('main.index')
 
 @section('index')
@@ -70,7 +69,7 @@
             <nav class="card mb-3 p-3" style="border: none;">
                 <div class="nav nav-tabs tabsNav flex-column" id="myTab" role="tablist">
                     @if ($strategi->flag_column_keterangan == 8)
-                        <button class="nav-link btnNav" id="general-tab" data-bs-toggle="tab" data-bs-target="#general"
+                        <button class="nav-link btnNav active" id="general-tab" data-bs-toggle="tab" data-bs-target="#general"
                             role="tab" aria-controls="general" aria-selected="false" name="jenis"
                             style="display: flex; align-items:center">
                             <div class="roadmap-cover d-flex me-2">
@@ -154,7 +153,7 @@
                             </div>
                         </button>
                     @else
-                        <button class="nav-link btnNav" id="intermediate-tab" data-bs-toggle="tab"
+                        <button class="nav-link btnNav active" id="intermediate-tab" data-bs-toggle="tab"
                             data-bs-target="#intermediate" role="tab" aria-controls="intermediate"
                             aria-selected="false" name="jenis" style="display: flex; align-items:center; ">
                             <div class="roadmap-cover d-flex me-2">
@@ -202,15 +201,15 @@
         </aside>
         <div class="col" >
             <div class="tab-content">
-                <div class="keterangan-roadmap mb-3 pt-3">
+                <div class="keterangan-roadmap mb-3 py-3">
                     <div class="col ps-5">
                         <h6 class="m-0"> Table</h6>
                         <h5 class="mb-2"> {{ $strategi->roadmap }} </h5>
                         <h5 class="mb-2" style="font-size: 30px;"> Tahun {{ $strategi->tahun_awal }} - {{ $strategi->tahun_akhir }} </h5>
                     </div>
-                    <div class="col">
+                    {{-- <div class="col">
                         <img src="{{ asset('img/illustration/Meeting-pana.png') }}" alt="company_gif" style="width: 400px; height:400px;">
-                    </div>
+                    </div> --}}
                 </div>
                 @include('Renstra.general-objective.general')
                 @include('Renstra.ultimate-objective.ultimate')

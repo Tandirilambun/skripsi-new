@@ -116,7 +116,8 @@ class StrategiController extends Controller
         $avg_general = $capaian_general_query->avg_capaian ?? 0;
         $generals = GeneralObjective::all();
 
-        session()->put('status_general', 'general');
+        $status = "status_general";
+        // session()->flash('status_general', 'general');
         return view('Renstra.strategi', [
             'generalObjective' => $generalObjective,
             'indikators' => $indikators,
@@ -125,6 +126,7 @@ class StrategiController extends Controller
             'list_indikator' => $list_indikator,
             'avg_general' => $avg_general,
             'generals' => $generals,
+            'status' => $status,
         ]);
     }
     public function showIndikatorUltimate(UltimateObjective $ultimateObjective)
@@ -159,7 +161,8 @@ class StrategiController extends Controller
         }
         $avg_ultimate = $capaian_ultimate_query->avg_capaian ?? 0;
         $ultimates = UltimateObjective::all();
-        session()->put('status_ultimate', 'ultimate');
+        // session()->flash('status_ultimate', 'ultimate');
+        $status = "status_ultimate";
         return view('Renstra.strategi', [
             'ultimateObjective' => $ultimateObjective,
             'indikators' => $indikators,
@@ -168,6 +171,7 @@ class StrategiController extends Controller
             'list_indikator' => $list_indikator,
             'avg_ultimate' => $avg_ultimate,
             'ultimates' => $ultimates,
+            'status' => $status,
         ]);
     }
 
@@ -203,7 +207,8 @@ class StrategiController extends Controller
         }
         $avg_intermediate = $capaian_intermediate_query->avg_capaian ?? 0;
         $intermediates = IntermediateObjective::all();
-        session()->put('status_intermediate', 'intermediate');
+        // session()->flash('status_intermediate', 'intermediate');
+        $status = "status_intermediate";
         return view('Renstra.strategi', [
             'intermediateObjective' => $intermediateObjective,
             'indikators' => $indikators,
@@ -212,6 +217,7 @@ class StrategiController extends Controller
             'list_indikator' => $list_indikator,
             'avg_intermediate' => $avg_intermediate,
             'intermediates' => $intermediates,
+            'status' => $status,
         ]);
     }
 
@@ -247,7 +253,8 @@ class StrategiController extends Controller
         }
         $avg_outcome = $capaian_outcome_query->avg_capaian ?? 0;
         $outcomes = Outcome::all();
-        session()->put('status_outcome', 'outcome');
+        // session()->flash('status_outcome', 'outcome');
+        $status = "status_outcome";
         return view('Renstra.strategi', [
             'outcome' => $outcome,
             'parent_intermediate' => $parent_intermediate,
@@ -255,7 +262,8 @@ class StrategiController extends Controller
             'avg_outcome' => $avg_outcome,
             'indikators' => $indikators,
             'list_indikator' => $list_indikator,
-            'outcomes' => $outcomes
+            'outcomes' => $outcomes,
+            'status' => $status
         ]);
     }
 
@@ -291,7 +299,8 @@ class StrategiController extends Controller
         }
         $avg_use_of_output = $capaian_use_of_output_query->avg_capaian ?? 0;
         $use_of_outputs = UseOfOutput::all();
-        session()->put('status_useofoutput', 'use of output');
+        // session()->flash('status_useofoutput', 'use of output');
+        $status = "status_useofoutput";
         return view('Renstra.strategi', [
             'useOfOutput' => $useOfOutput,
             'parent_outcome' => $parent_outcome,
@@ -299,7 +308,8 @@ class StrategiController extends Controller
             'avg_use_of_output' => $avg_use_of_output,
             'indikators' => $indikators,
             'list_indikator' => $list_indikator,
-            'use_of_outputs' => $use_of_outputs
+            'use_of_outputs' => $use_of_outputs,
+            'status' => $status
         ]);
     }
 
@@ -335,7 +345,8 @@ class StrategiController extends Controller
         }
         $avg_output = $capaian_output_query->avg_capaian ?? 0;
         $outputs = Output::all();
-        session()->put('status_output', 'output');
+        // session()->flash('status_output', 'output');
+        $status = "status_output";
         return view('Renstra.strategi', [
             'output' => $output,
             'parent_intermediate' => $parent_intermediate,
@@ -343,7 +354,8 @@ class StrategiController extends Controller
             'avg_output' => $avg_output,
             'indikators' => $indikators,
             'list_indikator' => $list_indikator,
-            'outputs' => $outputs
+            'outputs' => $outputs,
+            'status' => $status,
         ]);
     }
 }

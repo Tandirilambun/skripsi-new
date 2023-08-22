@@ -2,28 +2,17 @@
 
 @section('index')
     <div class="container py-3">
-        @if (session('status_general'))
-            {{ session()->flush() }}
+        @if ($status === 'status_general')
             @include('Renstra.general-objective.strategi-general')
-
-        @elseif (session('status_ultimate'))
-            {{ session()->flush() }}
+        @elseif ($status === 'status_ultimate')
             @include('Renstra.ultimate-objective.strategi-ultimate')
-
-        @elseif (session('status_intermediate'))
-            {{ session()->flush() }}
+        @elseif ($status === 'status_intermediate')
             @include('Renstra.intermediate-objective.strategi-intermediate')
-
-        @elseif (session('status_outcome'))
-            {{ session()->flush() }}
+        @elseif ($status === 'status_outcome')
             @include('Renstra.outcome.strategi-outcome')
-
-        @elseif (session('status_useofoutput'))
-            {{ session()->flush() }}
+        @elseif ($status === 'status_useofoutput')
             @include('Renstra.use-of-output.strategi-useofoutput')
-
-        @elseif (session('status_output'))
-            {{ session()->flush() }}
+        @elseif ($status === 'status_output')
             @include('Renstra.output.strategi-output')
         @endif
     </div>

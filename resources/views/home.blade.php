@@ -1,6 +1,28 @@
 @extends('main.index')
 
 @section('index')
+    @if (session()->has('login_success'))
+        <div class="modal fade" tabindex="-1" id="notifModal">
+            <div class="modal-dialog modal-dialog-centered justify-content-center align-items-center">
+                <div class="modal-content" style="max-width: 300px; flex:1;">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="login-notif">
+                                <p class="mb-1 mt-0">
+                                    <i class="bi bi-check-circle-fill mb-1 mt-0" ></i>
+                                </p>
+                                <p class="mb-0" style="font-weight:bold"> You're Log In as </p>
+                                <p style=" font-size:20px;font-weight:bold"> {{auth() -> user() -> name}} </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
     <div class="landing-page">
         <h2 class="message">
             Welcome!
@@ -12,7 +34,8 @@
                     <span>Yogyakarta</span>
                 </span>
             </span>
-            <a type="button" href="#roadmap-section" class="btn homeBtn mt-3 p-0">Getting Started</a>
+            <a type="button" href="#roadmap-section" class="btn homeBtn mt-3 p-0">Getting Started <i
+                    class="bi bi-arrow-right ms-2"></i> </a>
         </h2>
         <div>
             <img src="{{ asset('img/illustration/Company-amico.png') }}" alt="logo satunama"
@@ -42,7 +65,8 @@
                 </div>
             @endforeach
         </div>
-        {{-- <div class="card card-container py-3 shadow-sm" style="border-radius:20px; border-color: transparent;" id="roadmap-page">
+    </div>
+    {{-- <div class="card card-container py-3 shadow-sm" style="border-radius:20px; border-color: transparent;" id="roadmap-page">
             <div class="px-3">
                 <h5 style="font-weight:bold; font-size:24px;">Strategic Planning</h5>
                 <p style="font-weight:light; font-size:11px;">Rencana Strategis Yayasan SATUNAMA Yogyakarta</p>
@@ -70,7 +94,7 @@
                 </div>
             </div>
         </div> --}}
-        {{-- <!--Section untuk Departemen/Unit-->
+    {{-- <!--Section untuk Departemen/Unit-->
         <div class="card card-container mt-3 py-3 shadow-sm" style="border-radius:20px; border-color: transparent;">
             <div class="container">
                 <div id="carouselExampleControlsNoTouching" class="carousel carousel-dark slide" data-bs-touch="false" data-bs-interval="false">
@@ -131,5 +155,4 @@
                 </div>
             </div>
         </div> --}}
-    </div>
 @endsection

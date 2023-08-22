@@ -7,7 +7,7 @@
                 <div>
                     <h1 style="font-weight: bolder">DATA PAGE <br> RENCANA STRATEGIS</h1>
                     <small>A place where you can manage data</small><br>
-                    <small>Update & Delete</small>
+                    <small><code>Update & Delete</code></small>
                 </div>
             </div>
             <div class="col d-flex justify-content-center">
@@ -28,6 +28,7 @@
             <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active p-5" id="nav-strategi" role="tabpanel" aria-labelledby="nav-goal-tab"
                 style="background-color: white; border-radius:20px;">
+                    <!--General Objective-->
                     <div class="mb-5">
                         <p>General Objective</p>
                         <table class="table table-striped table-strategi">
@@ -56,7 +57,8 @@
                                                         @csrf
                                                         <button
                                                             class="btn btn-olah me-1  d-flex justify-content-center align-items-center"
-                                                            style="background-color:red;">
+                                                            style="background-color:red;"
+                                                            onclick="return alert('Are you sure to delete this data?')">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="16"
                                                                 height="16" fill="currentColor" class="bi bi-trash3 m-0"
                                                                 viewBox="0 0 16 16">
@@ -144,6 +146,7 @@
                             </tbody>
                         </table>
                     </div>
+                    <!--Ultimate Objective-->
                     <div class="mb-5">
                         <p>Ultimate Objective</p>
                         <table class="table table-striped table-strategi">
@@ -173,7 +176,8 @@
                                                         @csrf
                                                         <button
                                                             class="btn btn-olah me-1  d-flex justify-content-center align-items-center"
-                                                            style="background-color:red;">
+                                                            style="background-color:red;"
+                                                            onclick="return alert('Are you sure to delete this data?')">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="16"
                                                                 height="16" fill="currentColor"
                                                                 class="bi bi-trash3 m-0" viewBox="0 0 16 16">
@@ -282,6 +286,7 @@
                             </tbody>
                         </table>
                     </div>
+                    <!--Intermediate Objective-->
                     <div class="mb-5">
                         <p>Intermediate Objective</p>
                         <table class="table table-striped table-strategi">
@@ -311,7 +316,8 @@
                                                         @csrf
                                                         <button
                                                             class="btn btn-olah me-1  d-flex justify-content-center align-items-center"
-                                                            style="background-color:red;">
+                                                            style="background-color:red;"
+                                                            onclick="return alert('Are you sure to delete this data?')">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="16"
                                                                 height="16" fill="currentColor"
                                                                 class="bi bi-trash3 m-0" viewBox="0 0 16 16">
@@ -422,6 +428,7 @@
                             </tbody>
                         </table>
                     </div>
+                    <!--Outcome-->
                     <div class="mb-5">
                         <p>Outcome</p>
                         <table class="table table-striped table-strategi">
@@ -450,7 +457,8 @@
                                                         @csrf
                                                         <button
                                                             class="btn btn-olah me-1  d-flex justify-content-center align-items-center"
-                                                            style="background-color:red;">
+                                                            style="background-color:red;"
+                                                            onclick="return alert('Are you sure to delete this data?')">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="16"
                                                                 height="16" fill="currentColor"
                                                                 class="bi bi-trash3 m-0" viewBox="0 0 16 16">
@@ -562,6 +570,7 @@
                             </tbody>
                         </table>
                     </div>
+                    <!--Use Of Output-->
                     <div class="mb-5">
                         <p>Use Of Output</p>
                         <table class="table table-striped table-strategi">
@@ -591,7 +600,8 @@
                                                         @csrf
                                                         <button
                                                             class="btn btn-olah me-1  d-flex justify-content-center align-items-center"
-                                                            style="background-color:red;">
+                                                            style="background-color:red;"
+                                                            onclick="return alert('Are you sure to delete this data?')">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="16"
                                                                 height="16" fill="currentColor"
                                                                 class="bi bi-trash3 m-0" viewBox="0 0 16 16">
@@ -700,6 +710,7 @@
                             </tbody>
                         </table>
                     </div>
+                    <!--Output-->
                     <div class="mb-5">
                         <p>Output</p>
                         <table class="table table-striped table-strategi">
@@ -728,7 +739,8 @@
                                                         @csrf
                                                         <button
                                                             class="btn btn-olah me-1  d-flex justify-content-center align-items-center"
-                                                            style="background-color:red;">
+                                                            style="background-color:red;"
+                                                            onclick="return alert('Are you sure to delete this data?')">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="16"
                                                                 height="16" fill="currentColor"
                                                                 class="bi bi-trash3 m-0" viewBox="0 0 16 16">
@@ -861,6 +873,7 @@
                 </div>
                 <div class="tab-pane fade p-5" id="nav-indikator" role="tabpanel" aria-labelledby="nav-goal-tab"
                 style="background-color: white; border-radius:20px;">
+                    <!--Indikator General Objective-->
                     <div class="mb-5">
                         <p>General Objective</p>
                         <table class="table table-striped table-indikator">
@@ -886,7 +899,8 @@
                                                         @csrf
                                                         <button
                                                             class="btn btn-olah me-1  d-flex justify-content-center align-items-center"
-                                                            style="background-color:red;">
+                                                            style="background-color:red;"
+                                                            onclick="return alert('Are you sure to delete this data?')">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="16"
                                                                 height="16" fill="currentColor"
                                                                 class="bi bi-trash3 m-0" viewBox="0 0 16 16">
@@ -967,6 +981,7 @@
                             </tbody>
                         </table>
                     </div>
+                    <!--Indikator Ultimate Objective-->
                     <div class="mb-5">
                         <p>Ultimate Objective</p>
                         <table class="table table-striped table-indikator">
@@ -992,7 +1007,8 @@
                                                         @csrf
                                                         <button
                                                             class="btn btn-olah me-1  d-flex justify-content-center align-items-center"
-                                                            style="background-color:red;">
+                                                            style="background-color:red;"
+                                                            onclick="return alert('Are you sure to delete this data?')">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="16"
                                                                 height="16" fill="currentColor"
                                                                 class="bi bi-trash3 m-0" viewBox="0 0 16 16">
@@ -1075,6 +1091,7 @@
                             </tbody>
                         </table>
                     </div>
+                    <!--Indikator Intermediate Objective-->
                     <div class="mb-5">
                         <p>Intermediate Objective</p>
                         <table class="table table-striped table-indikator">
@@ -1100,7 +1117,8 @@
                                                         @csrf
                                                         <button
                                                             class="btn btn-olah me-1  d-flex justify-content-center align-items-center"
-                                                            style="background-color:red;">
+                                                            style="background-color:red;"
+                                                            onclick="return alert('Are you sure to delete this data?')">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="16"
                                                                 height="16" fill="currentColor"
                                                                 class="bi bi-trash3 m-0" viewBox="0 0 16 16">
@@ -1186,6 +1204,7 @@
                             </tbody>
                         </table>
                     </div>
+                    <!--Indikator Outcome-->
                     <div class="mb-5">
                         <p>Outcome</p>
                         <table class="table table-striped table-indikator">
@@ -1211,7 +1230,8 @@
                                                         @csrf
                                                         <button
                                                             class="btn btn-olah me-1  d-flex justify-content-center align-items-center"
-                                                            style="background-color:red;">
+                                                            style="background-color:red;"
+                                                            onclick="return alert('Are you sure to delete this data?')">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="16"
                                                                 height="16" fill="currentColor"
                                                                 class="bi bi-trash3 m-0" viewBox="0 0 16 16">
@@ -1292,6 +1312,7 @@
                             </tbody>
                         </table>
                     </div>
+                    <!--Indikator Use of Output-->
                     <div class="mb-5">
                         <p>Use Of Output</p>
                         <table class="table table-striped table-indikator">
@@ -1317,7 +1338,8 @@
                                                         @csrf
                                                         <button
                                                             class="btn btn-olah me-1  d-flex justify-content-center align-items-center"
-                                                            style="background-color:red;">
+                                                            style="background-color:red;"
+                                                            onclick="return alert('Are you sure to delete this data?')">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="16"
                                                                 height="16" fill="currentColor"
                                                                 class="bi bi-trash3 m-0" viewBox="0 0 16 16">
@@ -1402,6 +1424,7 @@
                             </tbody>
                         </table>
                     </div>
+                    <!--Indikator Output-->
                     <div class="mb-5">
                         <p>Output</p>
                         <table class="table table-striped table-indikator">
@@ -1427,7 +1450,8 @@
                                                         @csrf
                                                         <button
                                                             class="btn btn-olah me-1  d-flex justify-content-center align-items-center"
-                                                            style="background-color:red;">
+                                                            style="background-color:red;"
+                                                            onclick="return alert('Are you sure to delete this data?')">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="16"
                                                                 height="16" fill="currentColor"
                                                                 class="bi bi-trash3 m-0" viewBox="0 0 16 16">
